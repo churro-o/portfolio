@@ -48,6 +48,7 @@ export const certifications = [
   //   name: "AWS Certified Developer",
   //   issuer: "Amazon",
   //   date: "2023",
+  //   credentialURL: "",
   // },
 ];
 
