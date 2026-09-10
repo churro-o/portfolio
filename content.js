@@ -4,63 +4,62 @@
 // for sections you don't have content for yet (e.g. projects).
 
 export const sidebar = {
-  name: "",              // e.g. "Jordan Lee"
-  tagline: "",           // e.g. "Software engineer & lifelong learner"
-  photo: "",             // path or URL to your photo, e.g. "/images/profile.jpg"
+  name: "Iris Xu",
+  tagline: "Product, Technology & Analytics",
+  photo: "",
 };
 
 export const personalInfo = {
-  bio: "",                // 2-4 sentences, first-person, from your resume summary
+  bio:
+    "Product management professional with experience across enterprise software, consulting, and analytics. My background combines business, computer science, and data analytics, with experience translating user and stakeholder needs into product requirements and working with technical teams to deliver scalable solutions.",
   education: [
-    // one object per school/degree, most recent first
-    // {
-    //   institution: "State University",
-    //   degree: "B.S. Computer Science",
-    //   years: "2018–2022",
-    //   note: ""            // optional, e.g. "Dean's List" or GPA
-    // },
+    {
+      institution: "Georgia Institute of Technology",
+      degree: "Master of Science in Computational Data Analytics",
+      years: "2025–Present",
+      note: "Online",
+    },
+    {
+      institution: "University of British Columbia, Sauder School of Business",
+      degree:
+        "Bachelor of Commerce in Business and Computer Science, Business Analytics Concentration",
+      years: "2018–2024",
+      note: "",
+    },
   ],
 };
 
 export const experience = [
-  // one object per job, most recent first
-  // {
-  //   company: "Acme Corp",
-  //   role: "Software Engineer",
-  //   years: "2022–2024",
-  //   description: "", // 1-2 sentences on what you did/built
-  // },
+  {
+    company: "IBM",
+    role: "Associate Consultant",
+    years: "2026–Present",
+    description:
+      "Support an enterprise SmartRecruiters implementation by translating recruiting workflows into functional requirements, configuring solutions, supporting testing and release readiness, and collaborating with client and technical stakeholders.",
+  },
+  {
+    company: "SAP",
+    role: "Associate Product Manager Intern",
+    years: "2023",
+    description:
+      "Supported SAP Analytics Cloud product development by translating business needs into user stories, prioritizing a backlog of 50+ feature requests, analyzing product usage, supporting UAT, and presenting new features to 200+ stakeholders.",
+  },
+  {
+    company: "Canadian Tire",
+    role: "Data Analyst Intern, eCommerce",
+    years: "2022",
+    description:
+      "Analyzed customer and operational data using SQL, Excel, and Tableau, and built an interim database solution for 10,000+ legacy records during a platform migration.",
+  },
 ];
 
-export const projects = [
-  // leave empty for now — add objects later once you have real projects
-  // {
-  //   title: "",
-  //   description: "",
-  //   link: "",
-  //   image: "",
-  // },
-];
+export const projects = [];
 
-export const certifications = [
-  // one object per certification
-  // {
-  //   name: "AWS Certified Developer",
-  //   issuer: "Amazon",
-  //   date: "2023",
-  //   credentialURL: "",
-  // },
-];
+export const certifications = [];
 
-export const interests = [
-  // one object per hobby/interest, for the mood-board section
-  // {
-  //   label: "Photography",
-  //   icon: "",     // optional icon name or image path
-  // },
-];
+export const interests = [];
 
 export const nextDestination = {
-  place: "",       // e.g. "Lisbon, Portugal"
-  note: "",        // one-line reason, e.g. "Chasing good coffee and old libraries"
+  place: "",
+  note: "",
 };
