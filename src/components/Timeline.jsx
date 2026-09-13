@@ -4,14 +4,14 @@ export default function Timeline({ entries, emptyMessage, renderEntry }) {
   }
 
   return (
-    <ol className="relative ml-4 max-w-3xl border-l-2 border-electric-iris pl-8">
+    <ol className="relative max-w-3xl pl-10 before:absolute before:bottom-2 before:left-2 before:top-2 before:w-0.5 before:bg-electric-iris">
       {entries.map((entry, index) => (
         <li
           key={`${entry.institution || entry.company || index}-${entry.years || index}`}
           className="timeline-entry relative mb-10 last:mb-0"
           style={{ animationDelay: `${index * 80}ms` }}
         >
-          <span className="absolute -left-[2.42rem] top-1.5 h-4 w-4 rounded-full bg-electric-iris ring-4 ring-white/70" />
+          <span className="absolute -left-10 top-1.5 h-4 w-4 rounded-full bg-electric-iris ring-4 ring-white/70" />
           {renderEntry(entry)}
         </li>
       ))}
