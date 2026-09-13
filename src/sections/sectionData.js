@@ -1,6 +1,6 @@
 export const NAV_ITEMS = [
   { id: "personal", label: "Product Profile" },
-  { id: "experience", label: "Product Experience" },
+  { id: "experience", label: "Work Experience" },
   { id: "certifications", label: "Credentials" },
   { id: "interests", label: "Product Toolkit" },
   { id: "destination", label: "Next Focus" },
