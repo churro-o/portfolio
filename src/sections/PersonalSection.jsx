@@ -5,7 +5,7 @@ import Timeline from "../components/Timeline.jsx";
 
 export default function PersonalSection() {
   return (
-    <SectionShell eyebrow="Personal" title="Personal Info/Background">
+    <SectionShell eyebrow="Profile" title="Product Profile">
       <div className="grid gap-10 lg:grid-cols-[0.9fr_1.4fr] lg:items-start">
         <div className="flex gap-5 rounded-[8px] bg-white/30 p-5">
           <Avatar photo={sidebar.photo} name={sidebar.name} />
