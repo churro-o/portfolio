@@ -1,17 +1,16 @@
 export const NAV_ITEMS = [
-  { id: "personal", label: "Personal Info/Background" },
-  { id: "experience", label: "Experience/Career Journey" },
-  { id: "projects", label: "Personal Projects" },
-  { id: "certifications", label: "Certifications" },
-  { id: "interests", label: "Interests/Hobbies" },
-  { id: "destination", label: "Next Destination" },
+  { id: "personal", label: "Product Profile" },
+  { id: "experience", label: "Product Experience" },
+  { id: "certifications", label: "Credentials" },
+  { id: "interests", label: "Product Toolkit" },
+  { id: "destination", label: "Next Focus" },
 ];
 
 export const SECTION_COLORS = {
-  personal: "#f2e8de",
-  experience: "#e2f0fe",
-  projects: "#f7efe2",
-  certifications: "#e5edf0",
-  interests: "#c6b9ff",
-  destination: "#6e87e7",
+  personal: "#F2E9E1",
+  experience: "#DCEAF7",
+  projects: "#F3D9C7",
+  certifications: "#DFE7D8",
+  interests: "#E8DDF5",
+  destination: "#314A6E",
 };
