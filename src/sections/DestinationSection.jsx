@@ -2,16 +2,16 @@ import { nextDestination } from "../../content.js";
 import SectionShell from "../components/SectionShell.jsx";
 
 export default function DestinationSection() {
-  const destination = nextDestination.place?.trim() || "[City, Country]";
-  const note = nextDestination.note?.trim() || "[one-line reason]";
+  const focus = nextDestination.place?.trim() || "AI-assisted product workflows";
+  const note = nextDestination.note?.trim() || "Add a one-line focus in content.js.";
 
   return (
-    <SectionShell eyebrow="Next" title="Next Destination" light>
+    <SectionShell eyebrow="Forward" title="Next Focus" light>
       <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
         <MapIllustration />
         <div className="max-w-xl text-white">
           <h2 className="font-heading text-3xl md:text-4xl">
-            Next stop: {destination}
+            Building toward: {focus}
           </h2>
           <p className="mt-4 text-xl leading-9 text-white/85">{note}</p>
         </div>
@@ -25,7 +25,7 @@ function MapIllustration() {
     <svg
       viewBox="0 0 520 360"
       role="img"
-      aria-label="Stylized map with a destination pin"
+      aria-label="Stylized product roadmap with a destination marker"
       className="min-h-72 w-full"
     >
       <path
@@ -49,7 +49,7 @@ function MapIllustration() {
       />
       <path
         d="M319 107c0 47-58 95-58 95s-58-48-58-95a58 58 0 0 1 116 0z"
-        fill="#f2e8de"
+        fill="#F2E9E1"
       />
       <circle cx="261" cy="107" r="22" fill="#5683da" />
       <circle cx="261" cy="267" r="20" fill="#ffffff" opacity="0.28" />
