@@ -4,12 +4,12 @@
 
 :root {
   --color-electric-iris: #5683da;
-  --color-sec1: #f2e8de;
-  --color-sec2: #e2f0fe;
-  --color-sec3: #f7efe2;
-  --color-sec4: #e5edf0;
-  --color-sec5: #c6b9ff;
-  --color-sec6: #6e87e7;
+  --color-sec1: #F2E9E1;
+  --color-sec2: #DCEAF7;
+  --color-sec3: #F3D9C7;
+  --color-sec4: #DFE7D8;
+  --color-sec5: #E8DDF5;
+  --color-sec6: #314A6E;
 }
 
 * {

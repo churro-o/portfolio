@@ -4,7 +4,7 @@ import Timeline from "../components/Timeline.jsx";
 
 export default function ExperienceSection() {
   return (
-    <SectionShell eyebrow="Experience" title="Experience/Career Journey">
+    <SectionShell eyebrow="Experience" title="Product Experience">
       <Timeline
         entries={experience}
         emptyMessage="Add career entries in content.js to build this timeline."

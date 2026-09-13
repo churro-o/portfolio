@@ -12,7 +12,7 @@ const tileClasses = [
 
 export default function InterestsSection() {
   return (
-    <SectionShell eyebrow="Mood Board" title="Interests/Hobbies">
+    <SectionShell eyebrow="Toolkit" title="Product Toolkit">
       {interests?.length ? (
         <div className="grid max-w-4xl auto-rows-[8.5rem] grid-cols-2 gap-4 md:grid-cols-4">
           {interests.map((interest, index) => (
@@ -22,26 +22,17 @@ export default function InterestsSection() {
                 tileClasses[index % tileClasses.length]
               }`}
             >
-              <span className="grid h-10 w-10 place-items-center rounded-full bg-white/60 text-lg">
-                {interest.icon || "*"}
+              <span className="grid h-10 w-10 place-items-center rounded-full bg-white/60 text-sm font-semibold text-electric-iris">
+                {interest.icon || "PM"}
               </span>
               <h2 className="text-lg font-semibold">{interest.label}</h2>
             </article>
           ))}
         </div>
       ) : (
-        <div className="grid max-w-4xl auto-rows-[8rem] grid-cols-2 gap-4 md:grid-cols-4">
-          {["Add", "Real", "Interests", "In content.js"].map((label, index) => (
-            <div
-              key={label}
-              className={`rounded-[8px] bg-white/30 p-5 text-lg font-semibold text-stone-700 ${
-                tileClasses[index]
-              }`}
-            >
-              {label}
-            </div>
-          ))}
-        </div>
+        <p className="max-w-2xl text-lg leading-8 text-stone-700">
+          Add product skills and tools in content.js to build this toolkit.
+        </p>
       )}
     </SectionShell>
   );
