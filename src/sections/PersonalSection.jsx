@@ -6,8 +6,8 @@ import Timeline from "../components/Timeline.jsx";
 export default function PersonalSection() {
   return (
     <SectionShell eyebrow="Profile" title="Product Profile">
-      <div className="grid gap-10 lg:grid-cols-[0.9fr_1.4fr] lg:items-start">
-        <div className="flex gap-5 rounded-[8px] bg-white/30 p-5">
+      <div className="space-y-12">
+        <div className="flex max-w-4xl gap-5 rounded-[8px] bg-white/30 p-5">
           <Avatar photo={sidebar.photo} name={sidebar.name} />
           <p className="text-lg leading-8 text-stone-700">
             {personalInfo.bio?.trim() ||
@@ -15,8 +15,8 @@ export default function PersonalSection() {
           </p>
         </div>
 
-        <div>
-          <h2 className="mb-8 font-heading text-3xl">Education</h2>
+        <div className="grid gap-8 lg:grid-cols-[14rem_1fr] lg:items-start">
+          <h2 className="font-heading text-3xl">Education</h2>
           <Timeline
             entries={personalInfo.education}
             emptyMessage="Add education milestones in content.js to build this timeline."
