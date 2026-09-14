@@ -7,7 +7,7 @@ export default function Avatar({ photo, name, size = "large" }) {
       <img
         src={photo}
         alt={`${label} photo`}
-        className={`${dimensions} rounded-full object-cover ring-2 ring-white/80`}
+        className={`${dimensions} shrink-0 rounded-full object-cover ring-2 ring-white/80`}
       />
     );
   }
@@ -16,7 +16,7 @@ export default function Avatar({ photo, name, size = "large" }) {
     <div
       aria-label="Profile photo placeholder"
       role="img"
-      className={`${dimensions} grid place-items-center rounded-full bg-stone-200 text-sm font-semibold text-stone-600 ring-2 ring-white/80`}
+      className={`${dimensions} grid shrink-0 place-items-center rounded-full bg-stone-200 text-sm font-semibold text-stone-600 ring-2 ring-white/80`}
     >
       {name?.trim()?.slice(0, 1).toUpperCase() || "P"}
     </div>
