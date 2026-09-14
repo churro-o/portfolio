@@ -16,6 +16,7 @@ High-level changes:
 - Changed fonts from Fraunces and Nunito Sans to Lora and Work Sans.
 - Temporarily removed Personal Projects from the live navigation while keeping the section code for later.
 - Updated content from the latest resume with stronger PM positioning.
+- Renamed the experience view to Work Experience for better accuracy.
 - Reframed Interests/Hobbies as Product Toolkit.
 - Reframed Next Destination as Next Focus.
 - Centered the timeline line through the circular timeline markers.
@@ -71,7 +72,7 @@ The navigation list changed from:
 To:
 
 - Product Profile
-- Product Experience
+- Work Experience
 - Credentials
 - Product Toolkit
 - Next Focus
@@ -166,25 +167,26 @@ The timeline line used to be created with a left border on the whole list:
 border-l-2 border-electric-iris
 ```
 
-The updated version uses a `before` pseudo-element:
+The updated version gives each timeline item a dedicated marker column and draws a line segment from one circle center to the next:
 
 ```jsx
-before:absolute before:bottom-2 before:left-2 before:top-2 before:w-0.5 before:bg-electric-iris
+grid grid-cols-[1rem_1fr] gap-6
+left-1/2 top-[0.875rem] -bottom-[0.875rem]
 ```
 
-The circle marker was also repositioned:
+The circle marker now lives inside that same 1rem marker column:
 
 ```jsx
-absolute -left-10 top-1.5 h-4 w-4
+relative z-10 mt-1.5 h-4 w-4
 ```
 
 ### Why it matters
 
 The old line and circle were close, but not mathematically centered. The new approach gives more control:
 
-- The line sits at `left-2`.
+- The line sits at the marker column's horizontal center.
 - The circle is 1rem wide.
-- The circle center lines up with the vertical line.
+- Each line segment starts at one circle center and ends at the next circle center.
 
 ### Learning note
 
@@ -208,6 +210,8 @@ Product Profile
 
 The eyebrow changed from `Personal` to `Profile`.
 
+The profile introduction also moved into a wider, fixed-radius content panel, and the avatar now uses `shrink-0` so it stays circular instead of compressing beside longer text.
+
 ### Why it matters
 
 This makes the first section feel more intentional for a hiring manager. It shifts the framing from general biography to candidate positioning.
@@ -215,6 +219,8 @@ This makes the first section feel more intentional for a hiring manager. It shif
 ### Learning note
 
 Small copy changes can change how a page is interpreted. In a portfolio, section names are not just labels. They tell the reader what lens to use.
+
+Layout changes carry the same weight. Giving the bio more horizontal room improves scanning, and protecting the avatar size keeps the visual hierarchy stable.
 
 ## `src/sections/ExperienceSection.jsx`
 
@@ -229,12 +235,12 @@ Experience/Career Journey
 To:
 
 ```jsx
-Product Experience
+Work Experience
 ```
 
 ### Why it matters
 
-This makes the experience section more relevant for PM hiring. The content already describes consulting, product management, analytics, and implementation work; the title now matches that story.
+This keeps the section accurate while still supporting PM hiring. The content describes consulting, product management, analytics, and implementation work, but the section is broader than product-only roles.
 
 ### Learning note
 
@@ -349,7 +355,7 @@ Additional checks:
 - Confirmed Personal Projects is no longer present in live navigation.
 - Smoke-tested rendered sections locally:
   - Product Profile
-  - Product Experience
+  - Work Experience
   - Credentials
   - Product Toolkit
   - Next Focus
